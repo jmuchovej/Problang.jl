@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  problang.jl:
+    image: "jmuchovej/julia:1.6.0"
+    ports:
+      - 7555:8888
+    volumes:
+      - ./chapters:/workspace
+    env_file:
+      - "docker.env"
